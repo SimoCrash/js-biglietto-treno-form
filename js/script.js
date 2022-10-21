@@ -6,8 +6,18 @@
 // - va applicato uno sconto del 20% per i minorenni
 // - va applicato uno sconto del 40% per gli over 65.
 
-const kmPercorsi = parseInt(prompt("quanti km vuoi percorrere?"));
-const eta = parseInt(prompt("quanti anni hai?"));
+let nomeCognome;
+let kmPercorsi;
+let eta;
+
+const btn = document.getElementById("genera");
+
+btn.addEventListener('click', function(){
+    nomeCognome = document.querySelector('#nome_cognome').value;
+    kmPercorsi = document.querySelector('#km').value;
+    eta = document.querySelector('#eta').value;
+})
+//const eta = parseInt(prompt("quanti anni hai?"));
 
 const prezzoKm = 0.21;
 
@@ -25,14 +35,16 @@ if (eta < 18) {
     prezzoViaggio = parseFloat(kmPercorsi * prezzoKm).toFixed(2);
 }
 
-document.querySelector(".km_percorsi").innerHTML =`Km percorsi: ${kmPercorsi} km`;
+document.querySelector(".name-surname").innerHTML =`Nome e Cognome: Signor/Signora ${nomeCognome}.`;
 
-document.querySelector(".eta").innerHTML =`Età del passeggero: ${eta} anni`;
+document.querySelector(".km_percorsi").innerHTML =`km da percorrrere: ${kmPercorsi}.`;
 
-document.querySelector(".sconto").innerHTML = `Lo sconto per la tua età è: ${sconto}`;
+document.querySelector(".eta").innerHTML = eta;
 
-document.querySelector(".prezzo_km").innerHTML =`Prezzo per km: ${prezzoKm} €`;
+//document.querySelector(".sconto").innerHTML = `Lo sconto per la tua età è: ${sconto}`;
 
-document.querySelector(".prezzo_viaggio").innerHTML =`Prezzo totale del viaggio: ${prezzoViaggio} €`;
+//document.querySelector(".prezzo_km").innerHTML =`Prezzo per km: ${prezzoKm} €`;
+
+//document.querySelector(".prezzo_viaggio").innerHTML =`Prezzo totale del viaggio: ${prezzoViaggio} €`;
 
 

@@ -15,20 +15,21 @@
     <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1> 
     <div class="container-form">
         <div class="container-data">
-            <input type="text" name="name" id="">
-            <input type="number" name="km" id="">
-            <select id="" name="eta">
-            <option>Minorenne</option>
-            <option selected>Maggiorenne</option>
-            <option>Over 65</option>
+            <input type="text" name="name" id="nome_cognome">
+            <input type="number" name="km" id="km">
+            <select id="eta" name="eta">
+                <option value="Minorenne">Minorenne</option>
+                <option value="Maggiorenne" selected>Maggiorenne</option>
+                <option value="Over 65">Over 65</option>
             </select>
         </div>
         <div class="buttons">
-            <button>Genera</button>
+            <button id="genera">Genera</button>
             <input type="reset" value="reset">
         </div>
     </div>
         
+    <div class="name-surname"></div>
     <div class="km_percorsi"></div>
     <div class="eta"></div>
     <div class="sconto"></div>
