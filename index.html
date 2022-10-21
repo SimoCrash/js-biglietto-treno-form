@@ -15,17 +15,26 @@
     <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1> 
     <div class="container-form">
         <div class="container-data">
-            <input type="text" name="name" id="nome_cognome">
-            <input type="number" name="km" id="km">
-            <select id="eta" name="eta">
-                <option value="Minorenne">Minorenne</option>
-                <option value="Maggiorenne" selected>Maggiorenne</option>
-                <option value="Over 65">Over 65</option>
-            </select>
+            <div>
+                <div class="description-input">Nome e Cognome</div>
+                <input type="text" name="name" placeholder="Inserisci il tuo nome" id="nome_cognome">
+            </div>
+            <div>
+                <div class="description-input">Km da percorrere</div>
+                <input type="number" name="km" id="km" placeholder="Inserisci i km">
+            </div>
+            <div>
+                <div class="description-input">Fascia d'età</div>
+                <select id="eta" name="eta">
+                    <option value="Minorenne">Minorenne</option>
+                    <option value="Maggiorenne" selected>Maggiorenne</option>
+                    <option value="Over 65">Over 65</option>
+                </select>
+            </div>
         </div>
         <div class="buttons">
-            <button id="genera">Genera</button>
-            <input type="reset" value="reset">
+            <button class="btn-form" id="genera">Genera</button>
+            <input class="btn-form" type="reset" value="reset">
         </div>
     </div>
         
