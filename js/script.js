@@ -13,13 +13,26 @@ const prezzoKm = 0.21;
 
 let prezzoViaggio;
 
+let sconto = 0 + "%";
+
 if (eta < 18) {
     prezzoViaggio = parseFloat(((kmPercorsi * prezzoKm) * 0.8)).toFixed(2);
-    console.log(prezzoViaggio);
+    sconto = 20 + "%";
 } else if (eta >= 65) {
     prezzoViaggio = parseFloat(((kmPercorsi * prezzoKm) * 0.6)).toFixed(2);
-    console.log(prezzoViaggio);
+    sconto = 40 + "%";
 } else {
     prezzoViaggio = parseFloat(kmPercorsi * prezzoKm).toFixed(2);
-    console.log(prezzoViaggio);
 }
+
+document.querySelector(".km_percorsi").innerHTML =`Km percorsi: ${kmPercorsi} km`;
+
+document.querySelector(".eta").innerHTML =`Età del passeggero: ${eta} anni`;
+
+document.querySelector(".sconto").innerHTML = `Lo sconto per la tua età è: ${sconto}`;
+
+document.querySelector(".prezzo_km").innerHTML =`Prezzo per km: ${prezzoKm} €`;
+
+document.querySelector(".prezzo_viaggio").innerHTML =`Prezzo totale del viaggio: ${prezzoViaggio} €`;
+
+
