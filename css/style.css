@@ -65,3 +65,33 @@ h1 {
     background-color: #999999;
     cursor: pointer;
 }
+
+.container-ticket {
+    /* display: none; */
+    background-color: white;
+    width: 70vw;
+    margin: .5rem auto;
+    padding: 1rem;
+}
+
+.details {
+    border: 1px solid #999999;
+    display: flex;
+    align-items: center;
+}
+
+.d_flex {
+    height: 150px;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.details .nome-passeggero {
+    background-color: grey;
+}
+
+.d_block {
+    
+}
