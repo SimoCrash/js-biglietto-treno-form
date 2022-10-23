@@ -31,9 +31,9 @@ btn.addEventListener('click', function(){
 
     document.querySelector(".tipo_biglietto").innerHTML = tipoBiglietto;
 
-    document.querySelector(".eta").innerHTML = eta;
+    document.querySelector(".carrozza").innerHTML = Math.ceil(Math.random()*10);
 
-    document.querySelector(".sconto").innerHTML = `Lo sconto per la tua età è: ${sconto}`;
+    document.querySelector(".codice-cp").innerHTML = Math.ceil(Math.random()*1000);
 
     document.querySelector(".prezzo_viaggio").innerHTML =`${prezzoViaggio} €`;
 })
